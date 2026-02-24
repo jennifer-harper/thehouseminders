@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
 
 @theme {
   --color-main: #a9c4ed;
-  --color-dark: #0f1836;
+  --color-dark: #1e2641;
   --color-light: #f0f6ff;
+  --color-lightSalmon: #fff1ec;
   --color-salmon: #ffd3c2;
   --color-lobster: #ff713a;
   --color-orange: #e95218;
+  --color-darkOrange: #b83402;
 }
 body {
   background-color: var(--color-light);
@@ -19,30 +22,30 @@ body {
 @layer base {
   h1,
   .h1-style {
-    font-size: clamp(3rem, 6vw, 8rem);
+    font-size: clamp(2.6rem, 4.3vw, 6rem);
     font-weight: 800;
     line-height: 1.1;
   }
   h2 {
-    font-size: clamp(2.4rem, 4vw, 8rem);
-    font-weight: 400;
+    font-size: clamp(2.4rem, 3vw, 5rem);
+    font-weight: 800;
     line-height: 1.1;
   }
 
   h3,
   .h3-style {
-    font-size: clamp(1.3rem, 2vw, 6rem);
-    font-weight: 400;
+    font-size: clamp(1.3rem, 1.7vw, 4rem);
+    font-weight: 800;
     line-height: 1.1;
   }
 
   p,
   .p-style {
     /* Fluid body text is often better than "snapping" it */
-    font-size: clamp(1rem, 0.5vw + 0.8rem, 1.5rem);
+    font-size: clamp(1em, 0.3vw + 0.8rem, 1.5rem);
     line-height: 1.4;
     text-wrap: pretty;
-    font-family: 'Zalando Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
   .bigger {
     font-size: clamp(1.5rem, 0.7vw + 0.9rem, 2rem);
