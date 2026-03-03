@@ -338,6 +338,12 @@
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
+  .w-30 {
+    width: calc(var(--spacing) * 30);
+  }
+  .w-60 {
+    width: calc(var(--spacing) * 60);
+  }
   .w-\[6vw\] {
     width: 6vw;
   }
@@ -420,6 +426,9 @@
   .to-main {
     --tw-gradient-to: var(--color-main);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .fill-dark {
+    fill: var(--color-dark);
   }
   .fill-main {
     fill: var(--color-main);
