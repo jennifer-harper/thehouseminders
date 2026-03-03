@@ -6,11 +6,9 @@
   --color-main: #a9c4ed;
   --color-dark: #1e2641;
   --color-light: #f0f6ff;
-  --color-lightSalmon: #fff1ec;
   --color-salmon: #ffd3c2;
   --color-lobster: #ff713a;
   --color-orange: #e95218;
-  --color-darkOrange: #b83402;
 }
 body {
   background-color: var(--color-light);
@@ -27,7 +25,7 @@ body {
     line-height: 1.1;
   }
   h2 {
-    font-size: clamp(2.4rem, 3vw, 5rem);
+    font-size: clamp(2.1rem, 3vw, 5rem);
     font-weight: 800;
     line-height: 1.1;
   }
@@ -48,7 +46,7 @@ body {
     font-family: 'Montserrat', sans-serif;
   }
   .bigger {
-    font-size: clamp(1.5rem, 0.7vw + 0.9rem, 2rem);
+    font-size: clamp(1.1rem, 0.3vw + 0.9rem, 1.5rem);
     font-weight: 400;
   }
 
@@ -113,34 +111,6 @@ section {
   mask-image: url(#responsiveMask);
 }
 
-/* slider */
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-.swiper-pagination-bullet-active {
-  background-color: var(--color-moss) !important;
-  z-index: 1000;
-}
-
-/* after-section background block */
-
-.after-section {
-  position: relative;
-  z-index: 0;
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -10vw;
-    width: calc(100% + 20vw);
-    height: 100%;
-    background-color: var(--color-mist);
-    z-index: -1;
-  }
-}
-
 .email-link {
   position: relative;
   cursor: pointer;
@@ -153,8 +123,9 @@ section {
   top: -1.5em;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #4a5d23; /* Your moss color */
+  background-color: #1e2641; /* dark color */
   color: white;
+  font-weight: 400;
   padding: 2px 8px;
   border-radius: 4px;
   font-size: 0.7rem;

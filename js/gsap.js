@@ -2,78 +2,91 @@ document.addEventListener('DOMContentLoaded', (event) => {
   if (typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger)
 
-    let mm = gsap.matchMedia()
-    console.log('GSAP Version:', gsap.version)
-    mm.add('(min-width: 1366px) and (any-pointer: fine)', () => {
-      // Final Cleanup update
+    gsap.from('#light', {
+      scrollTrigger: {
+        trigger: '#services',
+        id: 'Light-Animation',
+        start: 'top -40',
+        toggleActions: 'play none none reset',
+        // markers: true,
+      },
+      autoAlpha: 0,
+      duration: 1,
+      ease: 'power2.out',
+    })
 
-      const catTL = gsap.timeline({
-        repeat: -1, // -1 means loop forever
-        yoyo: true, // Play forward then backward
-        defaults: { ease: 'sine.inOut' }, // Smoother movement for animals
-      })
+    // 1. hero tail
+    gsap.to('#tail', {
+      duration: 4,
+      rotate: 5,
+      skewY: 10,
+      scale: 0.95,
+      x: 5,
+      transformOrigin: '0% 0%',
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut',
+    })
 
-      // 1. The Tail Animation (Faster cycle)
-      gsap.to('#tail', {
-        duration: 4,
-        rotate: 5,
-        skewY: 10,
-        scale: 0.95,
-        x: 5,
-        transformOrigin: '0% 0%',
+    gsap.to(['#head-group', '#left-eye-group'], {
+      rotate: -7,
+      transformOrigin: '50% 50%',
+      duration: 5,
+      ease: 'sine.inOut',
+      repeat: -1,
+      yoyo: true,
+      repeatDelay: 5,
+    })
+
+    // all clouds - Cloud
+    gsap.fromTo(
+      '.cloud',
+      { y: '0vw' },
+      {
+        y: '5',
+        x: '30',
+        duration: 5,
         repeat: -1,
+        ease: 'none',
         yoyo: true,
-        ease: 'sine.inOut',
-      })
+      },
+    )
 
-      //   // Cloud 1: Large & Slower
-      //   gsap.fromTo(
-      //     '#cloud',
-      //     { x: '0vw' }, // Start off-screen left
-      //     {
-      //       x: '120vw', // End off-screen right
-      //       duration: 160, // Long duration for slow movement
-      //       repeat: -1, // Loop forever
-      //       ease: 'none', // Crucial: Use "none" for a constant speed carousel
-      //       delay: 3,
-      //     },
-      //   )
+    //all clouds - cloud sm
+    gsap.fromTo(
+      '.cloud-sm',
+      { y: '0vw' },
+      {
+        y: '-5',
+        x: '-30',
+        duration: 5,
+        repeat: -1,
+        ease: 'none',
+        yoyo: true,
+      },
+    )
 
-      //   // Cloud 2: Small & Faster (creates depth)
-      //   gsap.fromTo(
-      //     '#cloud-sm',
-      //     { x: '-3vw' },
-      //     {
-      //       x: '120vw',
-      //       duration: 140,
-      //       repeat: -1,
-      //       ease: 'none',
-      //     },
-      //   )
+    // about us grey cat
+    gsap.from('#grey-tail', {
+      transformOrigin: '100% 0%',
+      rotate: 45,
+      yoyo: true,
+      repeat: -1,
+      duration: 5,
+      ease: 'sine.inOut',
+    })
 
-      const headTL = gsap.timeline({
-        repeat: -1, // Loop the whole sequence forever
-        repeatDelay: 5, // Wait 10 seconds before starting the next loop
-        yoyo: true, // Move there and back
-        defaults: {
-          ease: 'sine.inOut',
-          duration: 5,
-        },
-      })
-
-      // Animate both head and eye at the same time
-      headTL.to(
-        ['#head-group', '#left-eye-group'],
-        {
-          rotate: -7,
-          transformOrigin: '50% 50%',
-        },
-        0,
-      )
-
-      return () => {
-        catTL.kill()
-      }
-    }) // End mm.add
+    //pricing, stars
+    gsap.to('.star', {
+      opacity: 0,
+      duration: 0.5, // Fast "off"
+      ease: 'none', // No smoothing, just a sharp change
+      stagger: {
+        each: 0.8, // Time between each star starting its blink
+        from: 'random', // This creates the random sequence you asked for
+        repeat: -1, // Loop forever
+        yoyo: true, // Fade back in to opacity 1
+      },
+    })
   } // End ScrollTrigger check
 }) // End DOMContentLoaded
