@@ -528,6 +528,9 @@
   .text-gray-600 {
     color: var(--color-gray-600);
   }
+  .text-lobster {
+    color: var(--color-lobster);
+  }
   .text-white {
     color: var(--color-white);
   }
