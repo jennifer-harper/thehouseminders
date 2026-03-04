@@ -363,7 +363,7 @@
 
           <div class="w-full md:w-[60%] md:ms-[30%] lg:ms-0 lg:w-[40%] pb-0 relative flex items-end">
             <div class="w-full container-arch">
-              <img src="img/profile2.jpg" alt="" class="masked-element w-full h-auto" loading="eager" fetchpriority="high" />
+              <img src="img/profile2.jpg" alt="Corporate profile photo of Jennifer Harper" class="masked-element w-full h-auto" loading="eager" fetchpriority="high" />
             </div>
           </div>
         </div>
@@ -562,7 +562,7 @@
       </section>
 
       <!-- contact -->
-      <section class="md:px-[4vw] bg-linear-to-t from-light to-main" id="contact">
+      <section class="md:px-[4vw] pb-[8vw] pt-[18vw] bg-linear-to-t from-light to-main" id="contact">
         <svg id="cloud-sm" class="cloud-sm w-[6vw] absolute top-[8vh] right-[30vw] z-0" viewBox="0 0 210 65" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
           <path d="M209.75 64.9931H0C0 14.1805 36.4354 18.2178 54.6532 26.588C59.5769 17.7254 77.9915 0 112.261 0C146.53 0 160.021 25.6034 162.482 38.405C183.753 31.3149 202.857 53.1762 209.75 64.9931Z" fill="white" />
         </svg>
@@ -571,14 +571,42 @@
           <path d="M209.75 64.9931H0C0 14.1805 36.4354 18.2178 54.6532 26.588C59.5769 17.7254 77.9915 0 112.261 0C146.53 0 160.021 25.6034 162.482 38.405C183.753 31.3149 202.857 53.1762 209.75 64.9931Z" fill="white" />
         </svg>
 
-        <div class="w-full min-h-[90vh] flex flex-col justify-center items-center text-center p-[3em] md:p-0">
-          <div class="md:max-w-[80%] lg:w-[60vw] text-balance">
-            <h2 class="mb-[.6em]">Interested? We’d love to hear from you.</h2>
-            <p class="mb-[.5em] text-balance bigger"><b> Contact us with your preferred dates, your location and a few details about your home and pets. We’ll get back to you promptly with a bespoke proposal.</b></p>
-            <p class="mb-[1.5em] text-balance">For every booking, we provide a clear Service Agreement that outlines our commitment to your home's security and your pet's well-being. We are also fully covered by Public Liability Insurance for your total peace of mind.</p>
-            <h3 class="leading-[1.4em]">
-              <a href="mailtto:hello@minders.co.nz" araia-label="Contact us at hello@hellominders.co.nz" class="email-link hover:text-orange transition-colors">hello@thehouseminders.co.nz</a>
-            </h3>
+        <div class="w-full p-[3em] md:p-0 flex flex-col justify-center content-center">
+          <div class="w-full text-balance text-center">
+            <h2 class="mb-[.6em] md:mb-[1.6em] lg:mb-[2em]">Interested? We’d love to hear from you.</h2>
+          </div>
+
+          <div class="flex flex-col lg:flex-row w-full md:px-[6vw]">
+            <div class="w-full lg:w-[50%] py-[3em] lg:py-0 lg:pe-[6vw] flex flex-col">
+              <p class="mb-[.5em] bigger"><b> Contact us using the form provided. We’ll get back to you promptly with a bespoke proposal.</b></p>
+              <p class="mb-[1.5em]">For every booking, we provide a clear Service Agreement that outlines our commitment to your home's security and your pet's well-being. We are also fully covered by Public Liability Insurance for your total peace of mind.</p>
+              <p class="mb-[1.5em]">Hate using forms, or you have a different query? Feel free to contact us using the below email.</p>
+              <h3 class="leading-[1.4em]">
+                <a href="mailtto:hello@minders.co.nz" araia-label="Contact us at hello@hellominders.co.nz" class="email-link hover:text-orange transition-colors">hello@thehouseminders.co.nz</a>
+              </h3>
+            </div>
+
+            <div class="z-100 w-full lg:w-[50%]">
+              <form action="https://formspree.io/f/xojngeln" method="POST" class="">
+                <div class="pb-[1em]">
+                  <label class="block mb-1 font-medium">Your Name</label>
+                  <input type="text" name="name" required class="w-full p-2 border border-main rounded" />
+                </div>
+                <div class="pb-[1em]">
+                  <label class="block mb-1 font-medium">Email Address</label>
+                  <input type="email" name="_replyto" required class="w-full p-2 border border-main rounded" />
+                </div>
+                <div class="pb-[1em]">
+                  <label class="block mb-1 font-medium">Location (Suburb)</label>
+                  <input type="text" name="suburb" class="w-full p-2 border border-main rounded" />
+                </div>
+                <div class="pb-[1em]">
+                  <label class="block mb-1 font-medium">Dates & Details</label>
+                  <textarea name="message" rows="4" placeholder="Tell us about your preferred dates, pets, requirements... Please include your phone number if you'd like us to give you a call." class="w-full p-2 border border-main rounded"></textarea>
+                </div>
+                <button type="submit" class="bg-black text-white px-6 py-2 rounded hover:bg-lobster transition-all">Send Inquiry</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>

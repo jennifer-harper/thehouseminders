@@ -38,6 +38,7 @@ body {
   }
 
   p,
+  label,
   .p-style {
     /* Fluid body text is often better than "snapping" it */
     font-size: clamp(1em, 0.3vw + 0.8rem, 1.5rem);
