@@ -578,16 +578,17 @@
 
           <div class="flex flex-col lg:flex-row w-full md:px-[6vw]">
             <div class="w-full lg:w-[50%] py-[3em] lg:py-0 lg:pe-[6vw] flex flex-col">
-              <p class="mb-[.5em] bigger"><b> Contact us using the form provided. We’ll get back to you promptly with a bespoke proposal.</b></p>
+              <h3 class="mb-[.5em] bigger"><b> Contact us using the form provided. We’ll get back to you promptly with a bespoke proposal.</b></h3>
               <p class="mb-[1.5em]">For every booking, we provide a clear Service Agreement that outlines our commitment to your home's security and your pet's well-being. We are also fully covered by Public Liability Insurance for your total peace of mind.</p>
-              <p class="mb-[1.5em]">Hate using forms, or you have a different query? Feel free to contact us using the below email.</p>
+              <p class="mb-[1.5em]">Hate using forms? Have a different query? Skip the form and email us at:</p>
               <h3 class="leading-[1.4em]">
-                <a href="mailtto:hello@minders.co.nz" araia-label="Contact us at hello@hellominders.co.nz" class="email-link hover:text-orange transition-colors">hello@thehouseminders.co.nz</a>
+                <a href="mailtto:hello@minders.co.nz" id="email" araia-label="Contact us at hello@hellominders.co.nz" class="email-link hover:text-orange transition-colors">hello@thehouseminders.co.nz</a>
               </h3>
             </div>
 
             <div class="z-100 w-full lg:w-[50%]">
               <form action="https://formspree.io/f/xojngeln" method="POST" class="" id="house-minder-form">
+                <input type="hidden" name="_subject" id="email-subject" value="New Inquiry" />
                 <div class="pb-[1em]">
                   <label class="block mb-1 font-medium">Your Name</label>
                   <input type="text" name="name" required class="w-full p-2 border border-main rounded" />
@@ -606,8 +607,8 @@
                 </div>
                 <button type="submit" id="submit-button" class="bg-black text-white px-6 py-2 rounded hover:bg-lobster transition-all">Send Inquiry</button>
               </form>
-              <div id="success-message" class="hidden text-center py-10 animate-fade-in">
-                <h3 class="text-2xl font-bold mb-2">Thank you!</h3>
+              <div id="success-message" class="hidden py-10 animate-fade-in">
+                <h3 class="text-2xl font-bold mb-[2em]">Thank you!</h3>
                 <p class="text-gray-600">We've received your inquiry and will get back to you shortly.</p>
               </div>
             </div>
@@ -615,9 +616,9 @@
         </div>
       </section>
     </main>
-    <footer class="bg-light p-[2em] md:px-[4vw] md:flex flex-row justify-between items-center">
+    <footer class="bg-light p-[2em] md:px-[4vw] flex flex-row justify-between items-center">
       <div class="">
-        <svg class="w-30 fill-dark" viewBox="0 0 462 186" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-20 fill-dark" viewBox="0 0 462 186" xmlns="http://www.w3.org/2000/svg">
           <path d="M162.815 0.575998H169.823V67.776H162.815V0.575998ZM120.767 67.776H113.663V0.575998H120.767V67.776ZM163.487 36.768H119.999V30.528H163.487V36.768Z" fill="black" />
           <path
             d="M221.133 68.352C216.077 68.352 211.373 67.52 207.021 65.856C202.733 64.128 198.989 61.728 195.789 58.656C192.653 55.52 190.189 51.904 188.397 47.808C186.669 43.648 185.805 39.104 185.805 34.176C185.805 29.248 186.669 24.736 188.397 20.64C190.189 16.48 192.653 12.864 195.789 9.792C198.989 6.656 202.733 4.256 207.021 2.592C211.309 0.864 216.013 0 221.133 0C226.189 0 230.861 0.864 235.149 2.592C239.437 4.256 243.149 6.624 246.285 9.696C249.485 12.768 251.949 16.384 253.677 20.544C255.469 24.704 256.365 29.248 256.365 34.176C256.365 39.104 255.469 43.648 253.677 47.808C251.949 51.968 249.485 55.584 246.285 58.656C243.149 61.728 239.437 64.128 235.149 65.856C230.861 67.52 226.189 68.352 221.133 68.352ZM221.133 62.016C225.165 62.016 228.877 61.344 232.269 60C235.725 58.592 238.701 56.64 241.197 54.144C243.757 51.584 245.741 48.64 247.149 45.312C248.557 41.92 249.261 38.208 249.261 34.176C249.261 30.144 248.557 26.464 247.149 23.136C245.741 19.744 243.757 16.8 241.197 14.304C238.701 11.744 235.725 9.792 232.269 8.448C228.877 7.04 225.165 6.336 221.133 6.336C217.101 6.336 213.357 7.04 209.901 8.448C206.445 9.792 203.437 11.744 200.877 14.304C198.381 16.8 196.397 19.744 194.925 23.136C193.517 26.464 192.813 30.144 192.813 34.176C192.813 38.144 193.517 41.824 194.925 45.216C196.397 48.608 198.381 51.584 200.877 54.144C203.437 56.64 206.445 58.592 209.901 60C213.357 61.344 217.101 62.016 221.133 62.016Z"
@@ -700,7 +701,9 @@
 
         submitButton.disabled = true
         submitButton.innerText = 'Sending...'
-
+        const nameField = form.querySelector('input[name="name"]').value
+        const subjectField = document.getElementById('email-subject')
+        subjectField.value = 'House Minding Inquiry: ' + nameField
         const data = new FormData(form)
 
         try {
