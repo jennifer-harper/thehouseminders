@@ -213,17 +213,11 @@
   .top-\[10vh\] {
     top: 10vh;
   }
-  .top-\[12vh\] {
-    top: 12vh;
-  }
   .top-\[15vh\] {
     top: 15vh;
   }
   .top-\[20vh\] {
     top: 20vh;
-  }
-  .right-0 {
-    right: calc(var(--spacing) * 0);
   }
   .right-\[-2vw\] {
     right: -2vw;
@@ -260,9 +254,6 @@
   }
   .z-100 {
     z-index: 100;
-  }
-  .z-\[-1\] {
-    z-index: -1;
   }
   .z-\[100\] {
     z-index: 100;
@@ -330,12 +321,6 @@
   .mb-\[4em\] {
     margin-bottom: 4em;
   }
-  .ml-\[-10vw\] {
-    margin-left: -10vw;
-  }
-  .ml-\[-15vw\] {
-    margin-left: -15vw;
-  }
   .block {
     display: block;
   }
@@ -378,12 +363,6 @@
   .w-\[40vw\] {
     width: 40vw;
   }
-  .w-\[50vw\] {
-    width: 50vw;
-  }
-  .w-\[60\%\] {
-    width: 60%;
-  }
   .w-\[80\%\] {
     width: 80%;
   }
@@ -397,17 +376,8 @@
     --tw-translate-y: -50%;
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
-  .rotate-45 {
-    rotate: 45deg;
-  }
   .rotate-55 {
     rotate: 55deg;
-  }
-  .rotate-\[45\] {
-    rotate: 45;
-  }
-  .rotate-\[45deg\] {
-    rotate: 45deg;
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
@@ -457,9 +427,6 @@
   }
   .border-main {
     border-color: var(--color-main);
-  }
-  .bg-black {
-    background-color: var(--color-black);
   }
   .bg-dark {
     background-color: var(--color-dark);
@@ -524,12 +491,6 @@
   }
   .py-\[3em\] {
     padding-block: 3em;
-  }
-  .ps-\[25\%\] {
-    padding-inline-start: 25%;
-  }
-  .ps-\[50\%\] {
-    padding-inline-start: 50%;
   }
   .pt-\[18vw\] {
     padding-top: 18vw;
@@ -662,16 +623,6 @@
       margin-inline-end: 1em;
     }
   }
-  .md\:mb-\[\.6em\] {
-    @media (width >= 48rem) {
-      margin-bottom: .6em;
-    }
-  }
-  .md\:mb-\[1\.6em\] {
-    @media (width >= 48rem) {
-      margin-bottom: 1.6em;
-    }
-  }
   .md\:block {
     @media (width >= 48rem) {
       display: block;
@@ -768,11 +719,6 @@
       top: 12vh;
     }
   }
-  .lg\:left-\[-2vw\] {
-    @media (width >= 64rem) {
-      left: -2vw;
-    }
-  }
   .lg\:left-\[-3vw\] {
     @media (width >= 64rem) {
       left: -3vw;
@@ -818,11 +764,6 @@
       margin-right: -11vw;
     }
   }
-  .lg\:mb-\[2em\] {
-    @media (width >= 64rem) {
-      margin-bottom: 2em;
-    }
-  }
   .lg\:ml-\[-4vw\] {
     @media (width >= 64rem) {
       margin-left: -4vw;
@@ -836,16 +777,6 @@
   .lg\:flex {
     @media (width >= 64rem) {
       display: flex;
-    }
-  }
-  .lg\:w-\[15vw\] {
-    @media (width >= 64rem) {
-      width: 15vw;
-    }
-  }
-  .lg\:w-\[18vw\] {
-    @media (width >= 64rem) {
-      width: 18vw;
     }
   }
   .lg\:w-\[20vw\] {
@@ -863,9 +794,19 @@
       width: 40%;
     }
   }
+  .lg\:w-\[45\%\] {
+    @media (width >= 64rem) {
+      width: 45%;
+    }
+  }
   .lg\:w-\[50\%\] {
     @media (width >= 64rem) {
       width: 50%;
+    }
+  }
+  .lg\:w-\[55\%\] {
+    @media (width >= 64rem) {
+      width: 55%;
     }
   }
   .lg\:w-\[60\%\] {
@@ -881,11 +822,6 @@
   .lg\:max-w-\[80\%\] {
     @media (width >= 64rem) {
       max-width: 80%;
-    }
-  }
-  .lg\:flex-none {
-    @media (width >= 64rem) {
-      flex: none;
     }
   }
   .lg\:flex-row {
