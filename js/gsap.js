@@ -1,6 +1,22 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   if (typeof ScrollTrigger !== 'undefined') {
-    gsap.registerPlugin(ScrollTrigger)
+    gsap.set('#contact-inner', { yPercent: -50 })
+    const uncover = gsap.timeline({ paused: true })
+    uncover.to('#contact-inner', {
+      yPercent: 0,
+      ease: 'none',
+      onUpdate: function () {
+        console.log('update', this.progress())
+      },
+    })
+    ScrollTrigger.create({
+      trigger: '.trigger-footer',
+      start: 'bottom bottom',
+      end: '+=100%',
+      animation: uncover,
+      scrub: true,
+      markers: false,
+    })
 
     gsap.from('#light', {
       scrollTrigger: {

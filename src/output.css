@@ -10,7 +10,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-gray-600: oklch(44.6% 0.03 256.802);
-    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
@@ -19,6 +18,7 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --font-weight-light: 300;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -198,6 +198,9 @@
   .relative {
     position: relative;
   }
+  .sticky {
+    position: sticky;
+  }
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
@@ -206,6 +209,12 @@
   }
   .top-\[-10vw\] {
     top: -10vw;
+  }
+  .top-\[1vh\] {
+    top: 1vh;
+  }
+  .top-\[5vh\] {
+    top: 5vh;
   }
   .top-\[8vh\] {
     top: 8vh;
@@ -231,6 +240,9 @@
   .right-\[30vw\] {
     right: 30vw;
   }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
@@ -252,8 +264,14 @@
   .z-10 {
     z-index: 10;
   }
+  .z-50 {
+    z-index: 50;
+  }
   .z-100 {
     z-index: 100;
+  }
+  .z-\[-1\] {
+    z-index: -1;
   }
   .z-\[100\] {
     z-index: 100;
@@ -284,9 +302,6 @@
     @media (width >= 96rem) {
       max-width: 96rem;
     }
-  }
-  .me-\[1em\] {
-    margin-inline-end: 1em;
   }
   .mt-\[2em\] {
     margin-top: 2em;
@@ -320,6 +335,9 @@
   }
   .mb-\[4em\] {
     margin-bottom: 4em;
+  }
+  .mb-\[100vh\] {
+    margin-bottom: 100vh;
   }
   .block {
     display: block;
@@ -529,6 +547,10 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+  }
+  .font-light {
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
   }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
