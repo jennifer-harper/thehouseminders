@@ -1,30 +1,39 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   if (typeof ScrollTrigger !== 'undefined') {
-    gsap.set('#contact-inner', { yPercent: -50 })
-    const uncover = gsap.timeline({ paused: true })
-    uncover.to('#contact-inner', {
-      yPercent: 0,
-      ease: 'none',
-      onUpdate: function () {
-        console.log('update', this.progress())
-      },
-    })
-    ScrollTrigger.create({
-      trigger: '.trigger-footer',
-      start: 'bottom bottom',
-      end: '+=100%',
-      animation: uncover,
-      scrub: true,
-      markers: false,
+    let mm = gsap.matchMedia()
+
+    mm.add('(min-width: 768px)', () => {
+      // --- EVERYTHING IN HERE ONLY RUNS ABOVE 768px ---
+
+      // 1. Initial States
+      gsap.set('main', { y: '110vh' })
+      gsap.set('#contact-inner', { yPercent: -50 })
+
+      // 2. Create the Timeline
+      const masterUncover = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.trigger-footer',
+          start: 'bottom bottom',
+          end: '+=100%',
+          scrub: true,
+        },
+      })
+
+      masterUncover.to('main', { y: 0, ease: 'none' }, 0).to('#contact-inner', { yPercent: 0, ease: 'none' }, 0)
+
+      // Optional: Cleanup function if needed
+      return () => {
+        gsap.set(['main', '#contact-inner'], { clearProps: 'all' })
+      }
     })
 
     gsap.from('#light', {
       scrollTrigger: {
         trigger: '#services',
         id: 'Light-Animation',
-        start: 'top -40',
-        toggleActions: 'play none none reset',
-        // markers: true,
+        start: 'top top',
+        toggleActions: 'play reverse play reset',
+        //markers: true,
       },
       autoAlpha: 0,
       duration: 1,
