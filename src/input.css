@@ -3,7 +3,7 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-main: #a9c4ed;
+  --color-main: #7fa5de;
   --color-dark: #1e2641;
   --color-light: #f0f6ff;
   --color-salmon: #ffd3c2;
@@ -24,8 +24,8 @@ body {
     font-weight: 800;
     line-height: 1.1;
   }
-  h2 {
-    font-size: clamp(2.1rem, 3vw, 5rem);
+  .h2-style {
+    font-size: clamp(2.1rem, 6vw, 5rem);
     font-weight: 800;
     line-height: 1.1;
   }
