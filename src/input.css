@@ -69,10 +69,10 @@ body {
 }
 
 main {
-  overflow-x: hidden;
   margin: 0;
   position: relative;
   z-index: 1;
+  overflow-x: hidden;
 }
 
 a:focus,
@@ -142,3 +142,33 @@ main section {
 .email-link.copied::after {
   opacity: 1;
 }
+
+/* .marquee {
+    position: relative;
+    overflow: hidden;
+    padding:10px 0;
+    .marquee__inner a {
+      width: fit-content;
+      display: flex;
+      flex: auto;
+      flex-direction: row;
+      color:$accent-900;
+      &:hover{color:$base-accent-color}
+       .marquee__part{
+        flex-shrink: 0;
+        padding: 0 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p{
+          font-family: $header-font;
+          font-size:$base-font-size*1.2;
+          margin:0;
+          padding:0 20px 0 15px;
+        }
+        img{
+          max-width:100px;
+        }
+      }
+    }
+  } */

@@ -27,12 +27,40 @@ document.addEventListener('DOMContentLoaded', (event) => {
       }
     })
 
+    // marquee
+    const marquee = document.querySelector('.marquee-content .test-div')
+
+    // 3. The Infinite Loop
+    gsap.to(marquee, {
+      xPercent: -50, // This is the 'Golden Rule' for seamless loops
+      ease: 'linear',
+      duration: 10,
+      repeat: -1,
+      // Force GSAP to use 3D transforms for smoother sub-pixel rendering
+    })
+
+    const marqueeReverse = document.querySelector('.marquee-reverse .test-div')
+    gsap.set(marqueeReverse, { xPercent: -50 })
+
+    // 2. Animate back to 0
+
+    // 3. The Infinite Loop
+    gsap.to(marqueeReverse, {
+      xPercent: 0, // This is the 'Golden Rule' for seamless loops
+      ease: 'linear',
+      duration: 15,
+      repeat: -1,
+      // Force GSAP to use 3D transforms for smoother sub-pixel rendering
+    })
+
+    //marquee end
+
     gsap.from('#light', {
       scrollTrigger: {
         trigger: '#services',
         id: 'Light-Animation',
         start: 'top top',
-        toggleActions: 'play reverse play reset',
+        toggleActions: 'play none none reset',
         //markers: true,
       },
       autoAlpha: 0,
