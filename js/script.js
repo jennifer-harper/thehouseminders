@@ -72,3 +72,18 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   })
 })
+var swiper = new Swiper('.swiper', {
+  autoHeight: false,
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+})

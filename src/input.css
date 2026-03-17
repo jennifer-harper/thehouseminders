@@ -20,7 +20,7 @@ body {
 @layer base {
   h1,
   .h1-style {
-    font-size: clamp(2.6rem, 4.3vw, 6rem);
+    font-size: clamp(2.6rem, 4vw, 6rem);
     font-weight: 800;
     line-height: 1.1;
   }
@@ -143,32 +143,14 @@ main section {
   opacity: 1;
 }
 
-/* .marquee {
-    position: relative;
-    overflow: hidden;
-    padding:10px 0;
-    .marquee__inner a {
-      width: fit-content;
-      display: flex;
-      flex: auto;
-      flex-direction: row;
-      color:$accent-900;
-      &:hover{color:$base-accent-color}
-       .marquee__part{
-        flex-shrink: 0;
-        padding: 0 4px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        p{
-          font-family: $header-font;
-          font-size:$base-font-size*1.2;
-          margin:0;
-          padding:0 20px 0 15px;
-        }
-        img{
-          max-width:100px;
-        }
-      }
-    }
-  } */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  height: auto;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--color-lobster) !important;
+  z-index: 1000;
+}
