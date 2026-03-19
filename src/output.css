@@ -255,9 +255,6 @@
   .z-110 {
     z-index: 110;
   }
-  .z-\[110\] {
-    z-index: 110;
-  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -498,9 +495,6 @@
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
-  .px-\[3em\] {
-    padding-inline: 3em;
-  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -512,9 +506,6 @@
   }
   .py-\[3em\] {
     padding-block: 3em;
-  }
-  .pt-0 {
-    padding-top: calc(var(--spacing) * 0);
   }
   .pt-\[8vw\] {
     padding-top: 8vw;
@@ -691,11 +682,6 @@
       width: 20vw;
     }
   }
-  .md\:w-\[30\%\] {
-    @media (width >= 48rem) {
-      width: 30%;
-    }
-  }
   .md\:w-\[40\%\] {
     @media (width >= 48rem) {
       width: 40%;
@@ -755,11 +741,6 @@
   .md\:opacity-100 {
     @media (width >= 48rem) {
       opacity: 100%;
-    }
-  }
-  .lg\:fixed {
-    @media (width >= 64rem) {
-      position: fixed;
     }
   }
   .lg\:top-\[12vh\] {

@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 var swiper = new Swiper('.swiper', {
   autoHeight: false,
+  effect: 'fade',
   slidesPerView: 1,
   spaceBetween: 20,
   loop: true,
