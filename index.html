@@ -20,18 +20,18 @@
     <link rel="apple-touch-icon" href="/img/favicon.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link href="src/output.css" rel="stylesheet" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DXTG1Y9FY9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-DXTG1Y9FY9')
+    </script>
   </head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DXTG1Y9FY9"></script>
-  <script>
-    window.dataLayer = window.dataLayer || []
-    function gtag() {
-      dataLayer.push(arguments)
-    }
-    gtag('js', new Date())
-
-    gtag('config', 'G-DXTG1Y9FY9')
-  </script>
-
   <body class="text-[1em] relative">
     <!-- hero -->
     <section class="w-full min-h-screen md:px-[4vw] bg-linear-to-b from-light to-main" id="cat-trigger">
@@ -76,8 +76,8 @@
         </div>
 
         <button id="menu-toggle" class="md:hidden z-110 relative focus:outline-none" aria-label="Toggle menu">
-          <svg id="hamburger-icon" class="w-8 h-8 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-          <svg id="close-icon" class="hidden w-8 h-8 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          <svg id="hamburger-icon" class="w-8 h-8 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+          <svg id="close-icon" class="hidden w-8 h-8 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
         </button>
 
         <div id="nav-links" class="opacity-0 invisible transition-all duration-300 ease-in-out fixed inset-0 w-full h-screen bg-white flex flex-col justify-center items-center md:opacity-100 md:visible md:static md:h-auto md:w-auto md:bg-transparent md:flex-row">
@@ -538,7 +538,7 @@
         </div>
       </section>
       <!-- Testimonials -->
-      <section class="bg-light relative z-0 pt-[100px] lg:pt-[8vw] pb-[100px] lg:pb-[10vw] flex flex-col flex-wrap content-center items-center justify-center text-center overflow-hidden">
+      <section class="bg-light relative z-0 pt-25 lg:pt-[8vw] pb-25 lg:pb-[10vw] flex flex-col flex-wrap content-center items-center justify-center text-center overflow-hidden">
         <div class="swiper max-w-[70%]">
           <!-- Additional required wrapper -->
 
@@ -789,7 +789,6 @@
           { "@type": "AdministrativeArea", "name": "Northland" }
         ],
         "description": "Boutique house sitting and pet care for professionals in Wellington. Specializing in senior cat care and indoor plant maintenance."
-        <!-- "sameAs": ["https://www.facebook.com/your-page", "https://www.instagram.com/your-profile"] -->
       }
     </script>
   </body>
